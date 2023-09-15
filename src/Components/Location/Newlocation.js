@@ -1,23 +1,28 @@
-import React, { useState } from 'react'
-import Location from './Location'
-import data from '../Data'
-import LayerItems from '../Layer/LayerItems'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import Location from './Location';
+import data from '../Data';
 
 function Newlocation() {
-    const [item, setItem] = useState(data)
+  const { category } = useParams(); // Get the category from URL parameter
+  const [item, setItem] = useState([]);
 
-    const FilterMenu = (CateItem)=>{
-        const UpdatedItem = data.filter((CurrEle)=>{
-            return CurrEle.category === CateItem;
-        })
-        setItem(UpdatedItem)
-    }
+  useEffect(() => {
+    // Filter data based on the selected category
+    const updatedItem = data.filter((CurrEle) => {
+      return CurrEle.category === category;
+    });
+
+    // Update the item state with the filtered data
+    setItem(updatedItem);
+  }, [category]);
+
   return (
     <div>
-                
-        <Location item={item} />
+      <h1>{category} Locations</h1>
+      <Location item={item} />
     </div>
-  )
+  );
 }
 
-export default Newlocation
+export default Newlocation;

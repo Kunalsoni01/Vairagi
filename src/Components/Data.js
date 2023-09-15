@@ -16,7 +16,7 @@ const data = [
         
             id : 2,
             imgSrc : img1,
-            category : "Hill",
+            category : "fort",
             name : 'NaharGarh Fort',
             destination : 'Jaipur(Rajasthan)',
             description : 'Nahargarh Fort stands on the edge of the Aravalli Hills, overlooking the city of Jaipur in the Indian state of Rajasthan. Along with Amer Fort and Jaigarh Fort, Nahargarh once formed a strong defence ring for the city. The fort was originally named Sudershangarh, but it became known as Nahargarh, which means '

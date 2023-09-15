@@ -25,7 +25,7 @@ function App() {
            <Route path="/contact" element={<Contact />} />
            <Route path="/blog" element={<Blog />} />
            <Route path="/location" element={<Location />} />
-           <Route path="/newlocation" element={<Newlocation />} />
+           <Route path="/newlocation/:category" element={<Newlocation />} />
          </Routes>
        </BrowserRouter>
     </>
